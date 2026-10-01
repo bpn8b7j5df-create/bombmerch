@@ -2,222 +2,164 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>BombMerch — авторский мерч</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
 <!-- ================= HEADER ================= -->
 <header class="header">
-    <button class="menu-button" onclick="toggleMenu()">
-        ☰
-    </button>
-    <nav class="side-menu" id="sideMenu">
-        <a href="#home" onclick="toggleMenu()">
-            Главная
-        </a>
-        <a href="#catalog" onclick="toggleMenu()">
-            Каталог
-        </a>
-        <a href="#about" onclick="toggleMenu()">
-            О нас
-        </a>
-        <a href="#contacts" onclick="toggleMenu()">
-            Контакты
-        </a>
+    <button class="menu-button" id="menuButton" aria-label="Открыть меню" aria-expanded="false" aria-controls="sideMenu">☰</button>
+
+    <nav class="side-menu" id="sideMenu" aria-label="Главное меню">
+        <a href="#home">Главная</a>
+        <a href="#catalog">Каталог</a>
+        <a href="#contacts">Контакты</a>
     </nav>
-    <button class="cart">
-        Корзина
+
+    <button class="cart" type="button">
+        Корзина <span class="cart-count" id="cartCount">0</span>
     </button>
 </header>
-<!-- ================= ГЛАВНАЯ ================= -->
+
 <main>
-<section class="hero" id="home">
-    <div class="hero-text">
-        <p class="small-title">
-        </p>
-        <h1>
-            авторский мерч
-            <br>
-            <span>по любимым персонажам</span>
-        </h1>
-        <p class="description">
-            Брелоки, значки и другие авторские товары
-        </p>
-        <a href="#catalog" class="main-button">
-            Смотреть каталог →
-        </a>
-    </div>
-    <!-- КАРТОЧКА С ЛОГОТИПОМ -->
-    <div class="hero-card">
-        <div class="logo-circle">
-            <img
-                src="C:\Users\10\Downloads\WhatsApp Image 2026-09-09 at 09.39.17 (1).jpeg"
-                alt="Логотип BombMerch"
-            >
+    <!-- ================= ГЛАВНАЯ ================= -->
+    <section class="hero" id="home">    
+            <h1>
+                Авторский мерч<br>
+                <span>по любимым персонажам</span>
+            </h1>
+            <p class="description">Брелоки, значки и другие авторские товары</p>
+            <a href="#catalog" class="main-button">Смотреть каталог →</a>
         </div>
-        <h2>
-            BombMerch
-        </h2>
-    </div>
-</section>
-<!-- ================= КАТАЛОГ ================= -->
-<section class="catalog" id="catalog">
-    <div class="section-title">
-        <p>
-            НАШИ ТОВАРЫ
-        </p>
-        <h2>
-            Каталог
-        </h2>
-    </div>
-    <div class="products">
-        <!-- ТОВАР 1 -->
-        <article class="product">
-            <div class="product-image">
-                <img
-                    src="C:\Users\10\Downloads\WhatsApp Image 2026-09-14 at 09.34.34 (1).jpeg"
-                    alt="Акриловый брелок"
-                >
+
+        <div class="hero-card">
+            <div class="logo-circle">
+                <img src="images/WhatsApp Image 2026-09-09 at 09.39.17 (1).jpeg" alt="Логотип BombMerch">
             </div>
-            <div class="product-info">
-                <h1>
-                    Forsaken
-                </h1>
-                <p>
-                </p>
-                <div class="product-bottom">
-                    <strong>
-                    </strong>
-                    <button>
-                        В корзину
-                    </button>
+            <h2>BombMerch</h2>
+        </div>
+    </section>
+
+    <!-- ================= КАТАЛОГ ================= -->
+    <section class="catalog" id="catalog">
+        <div class="section-title">
+            <p>Наши товары</p>
+            <h2>Каталог</h2>
+        </div>
+
+        <div class="products">
+            <article class="product">
+                <div class="product-image">
+                    <img src="images/WhatsApp Image 2026-09-14 at 09.34.34 (1).jpeg" alt="Брелок Forsaken" loading="lazy">
                 </div>
-            </div>
-        </article>
-        <!-- ТОВАР 2 -->
-        <article class="product">
-            <div class="product-image">
-                <img
-                    src="C:\Users\10\Downloads\WhatsApp Image 2026-09-14 at 09.34.35.jpeg"
-                    alt="Брелок"
-                >
-            </div>
-            <div class="product-info">
-                <h1>
-                    Minecraft
-                </h1>
-                <p>
-                </p>
-                <div class="product-bottom">
-                    <strong>
-                    </strong>
-                    <button>
-                        В корзину
-                    </button>
+                <div class="product-info">
+                    <h3>Forsaken</h3>
+                    <p>Акриловый брелок</p>
+                    <div class="product-bottom">
+                        <strong>1000000000 ₽</strong>
+                        <button type="button" class="add-to-cart">В корзину</button>
+                    </div>
                 </div>
-            </div>
-        </article>
-        <!-- ТОВАР 3 -->
-        <article class="product">
-            <div class="product-image">
-                <img
-                    src="C:\Users\10\Downloads\WhatsApp Image 2026-09-14 at 09.34.35 (1).jpeg"
-                    alt="Голографический брелок"
-                >
-            </div>
-            <div class="product-info">
-                <h1>
-                    DreamSMP
-                </h1>
-                <p>
-                </p>
-                <div class="product-bottom">
-                    <strong>
-                    </strong>
-                    <button>
-                        В корзину
-                    </button>
+            </article>
+
+            <article class="product">
+                <div class="product-image">
+                    <img src="images/WhatsApp Image 2026-09-14 at 09.34.35.jpeg" alt="Брелок Minecraft" loading="lazy">
                 </div>
-            </div>
-        </article>
-        <!-- ТОВАР 4 -->
-        <article class="product">
-            <div class="product-image">
-                <img
-                    src="C:\Users\10\Downloads\WhatsApp Image 2026-09-14 at 09.34.35 (2).jpeg"
-                    alt="Значок 58 мм"
-                >
-            </div>
-            <div class="product-info">
-                <h1>
-                    Lololoshka
-                </h1>
-                <p>
-                </p>
-                <div class="product-bottom">
-                    <strong>
-                    </strong>
-                    <button>
-                        В корзину
-                    </button>
+                <div class="product-info">
+                    <h3>Minecraft</h3>
+                    <p>Брелок</p>
+                    <div class="product-bottom">
+                        <strong>100000000 ₽</strong>
+                        <button type="button" class="add-to-cart">В корзину</button>
+                    </div>
                 </div>
-            </div>
-        </article>
-        <!-- ТОВАР 5 -->
-        <article class="product">
-            <div class="product-image">
-                <img
-                    src="C:\Users\10\Downloads\WhatsApp Image 2026-09-14 at 09.34.36.jpeg"
-                    alt="Набор значков"
-                >
-            </div>
-            <div class="product-info">
-                <h1>
-                    Другие
-                </h1>
-                <p>
-                </p>
-                <div class="product-bottom">
-                    <strong>
-                    </strong>
-                    <button>
-                        В корзину
-                    </button>
+            </article>
+
+            <article class="product">
+                <div class="product-image">
+                    <img src="images/WhatsApp Image 2026-09-14 at 09.34.35 (1).jpeg" alt="Голографический брелок DreamSMP" loading="lazy">
                 </div>
-            </div>
-        </article>
-    </div>
-</section>
-<!-- ================= КОНТАКТЫ ================= -->
-<section class="contacts" id="contacts">
-    <div class="contact-t">
-        <p>
-            ОСТАЛИСЬ ВОПРОСЫ?
-        </p>
-        <h2>
-            Свяжитесь с нами
-        </h2>
-    </div>
-    <div class="contact-buttons">
-        <a href="#">
-            Telegram
-        </a>
-        <a href="#">
-            Instagram
-        </a>
-        <a href="#">
-            TikTok
-        </a>
-    </div>
-</section>
+                <div class="product-info">
+                    <h3>DreamSMP</h3>
+                    <p>Голографический брелок</p>
+                    <div class="product-bottom">
+                        <strong>1000000000 ₽</strong>
+                        <button type="button" class="add-to-cart">В корзину</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="product">
+                <div class="product-image">
+                    <img src="images/WhatsApp Image 2026-09-14 at 09.34.35 (2).jpeg" alt="Значок Lololoshka" loading="lazy">
+                </div>
+                <div class="product-info">
+                    <h3>Lololoshka</h3>
+                    <p>Значок 58 мм</p>
+                    <div class="product-bottom">
+                        <strong>10000000 ₽</strong>
+                        <button type="button" class="add-to-cart">В корзину</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="product">
+                <div class="product-image">
+                    <img src="images/WhatsApp Image 2026-09-14 at 09.34.36.jpeg" alt="Набор значков" loading="lazy">
+                </div>
+                <div class="product-info">
+                    <h3>Другие</h3>
+                    <p>Наборы значков</p>
+                    <div class="product-bottom">
+                        <strong>10000000 ₽</strong>
+                        <button type="button" class="add-to-cart">В корзину</button>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- ================= КОНТАКТЫ ================= -->
+    <section class="contacts" id="contacts">
+        <div class="contact-t">
+            <p>Остались вопросы?</p>
+            <h2>Свяжитесь с нами</h2>
+        </div>
+        <div class="contact-buttons">
+            <a href="#">Telegram</a>
+            <a href="#">Instagram</a>
+            <a href="#">TikTok</a>
+        </div>
+    </section>
 </main>
-<!-- ================= JAVASCRIPT ================= -->
+
 <script>
-function toggleMenu() {
     const menu = document.getElementById("sideMenu");
-    menu.classList.toggle("open");
-}
+    const menuButton = document.getElementById("menuButton");
+    const cartCount = document.getElementById("cartCount");
+    let count = 0;
+
+    function setMenu(open) {
+        menu.classList.toggle("open", open);
+        menuButton.setAttribute("aria-expanded", open);
+    }
+
+    menuButton.addEventListener("click", () => setMenu(!menu.classList.contains("open")));
+    menu.querySelectorAll("a").forEach(a => a.addEventListener("click", () => setMenu(false)));
+    document.addEventListener("click", e => {
+        if (!menu.contains(e.target) && !menuButton.contains(e.target)) setMenu(false);
+    });
+    document.addEventListener("keydown", e => { if (e.key === "Escape") setMenu(false); });
+
+    document.querySelectorAll(".add-to-cart").forEach(btn => {
+        btn.addEventListener("click", () => {
+            count++;
+            cartCount.textContent = count;
+        });
+    });
 </script>
 </body>
 </html>
